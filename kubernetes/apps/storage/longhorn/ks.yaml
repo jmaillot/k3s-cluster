@@ -6,8 +6,8 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: cluster-apps-ingress-nginx
-    - name: cluster-apps-external-secrets-bitwarden
+    - name: cluster-apps-nginx-internal
+    # - name: cluster-apps-external-secrets-bitwarden
   path: ./kubernetes/apps/storage/longhorn/app
   prune: true
   sourceRef:
