@@ -22,11 +22,9 @@ spec:
     image:
       repository: ghcr.io/larivierec/bitwarden-cli
       tag: latest
-    podAnnotations:
-      configmap.reloader.stakater.com/reload: bitwarden-cli
     envFrom:
       - secretRef:
-          name: bitwarden-secret
+          name: bitwarden-cli
     service:
       main:
         ports:
@@ -39,6 +37,7 @@ spec:
         spec:
           exec:
             command:  ["sh", "-c", "curl -X POST -s http://127.0.0.1:8087/sync | jq -e '.success == true'"]
+          timeoutSeconds: 5
       readiness:
         enabled: false
     resources:
