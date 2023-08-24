@@ -30,5 +30,5 @@
     - name: Template Kubernetes configuration
       ansible.builtin.include_tasks: tasks/kubernetes/main.yaml
 
-    # - name: Template Kubernetes addon configuration
-    #   ansible.builtin.include_tasks: tasks/addons/main.yaml
+    - name: Template Kubernetes addon configuration
+      ansible.builtin.include_tasks: tasks/addons/main.yaml

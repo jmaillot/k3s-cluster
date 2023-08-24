@@ -8,6 +8,6 @@ kubernetes:
           ansible_host: 192.168.1.225
     worker:
       hosts:
-        k3s-node1:
+        k3s-worker2:
           ansible_user: jmaillot
-          ansible_host: 192.168.1.226
+          ansible_host: 192.168.1.227
