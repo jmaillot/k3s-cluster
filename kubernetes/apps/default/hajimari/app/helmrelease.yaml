@@ -80,9 +80,9 @@ spec:
     ingress:
       main:
         enabled: true
-        ingressClassName: internal
+        ingressClassName: external
         annotations:
-          hajimari.io/enable: "true"
+          hajimari.io/enable: "false"
         hosts:
           - host: &host "hajimari.${SECRET_DOMAIN}"
             paths:
