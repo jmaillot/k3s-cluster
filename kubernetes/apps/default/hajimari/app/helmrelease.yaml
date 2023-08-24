@@ -32,10 +32,47 @@ spec:
       showGreeting: false
       showAppGroups: false
       showAppStatus: false
-      showBookmarkGroups: false
-      showGlobalBookmarks: false
+      showBookmarkGroups: true
+      showGlobalBookmarks: true
       showAppUrls: false
       defaultEnable: true
+      globalBookmarks:
+        - group: Divers
+          bookmarks:
+            - name: Discord
+              url: 'https://discord.com'
+            - name: Gmail
+              url: 'http://gmail.com'
+            - name: 'Assistant Support MS'
+              url: 'https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Ffr-fr%2Foffice%2Fassistant-support-et-r%25C3%25A9cup%25C3%25A9ration-de-microsoft-e90bb691-c2a7-4697-a94f-88836856c72f%3Fui%3Dfr-fr%26rs%3Dfr-fr%26ad%3Dfr&data=05%7C01%7Cjmaillot%40prodware.fr%7Cda42d3f2f64a42a971d308daaada9542%7Cbbfde416ad70431681eb73b70da0b6cd%7C0%7C0%7C638010153023908695%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=tUfNSx49ymaXREQoUQ1b6QvaD5g17uHu8xYzbHo88DU%3D&reserved=0'
+            - name: 'DNS Stuff'
+              url: 'http://www.dnsstuff.com/tools'
+            - name: 'Next Inpact'
+              url: 'http://www.nextinpact.com/'
+            - name: OpenAI
+              url: 'https://chat.openai.com/'
+            - name: Pluralsight
+              url: 'https://www.pluralsight.com/'
+        - group: 'Messaging Tools'
+          bookmarks:
+            - name: 'Acronis Cloud - Partner'
+              url: 'https://eu-cloud.acronis.com/ui/#/dashboards'
+            - name: 'Altospam - Admin Interface'
+              url: 'https://altospam.net/a/'
+            - name: 'Altospam - Revendeur'
+              url: 'https://www.altospam.eu/rev/'
+            - name: BitTitan
+              url: 'https://migrationwiz.bittitan.com/'
+            - name: Exclaimer
+              url: 'https://portal.exclaimer.com/new/'
+            - name: 'MS TestConnectivity'
+              url: 'https://testconnectivity.microsoft.com'
+            - name: 'MX Toolbox'
+              url: 'http://mxtoolbox.com/'
+            - name: 'VadeSecure - Partner'
+              url: 'https://partner.vadesecure.com/'
+            - name: 'VadeSecure - Partner OnPrem'
+              url: 'https://cloud.vadesecure.com/'
       namespaceSelector:
         matchNames:
           - default
@@ -45,7 +82,7 @@ spec:
         enabled: true
         ingressClassName: internal
         annotations:
-          hajimari.io/enable: "false"
+          hajimari.io/enable: "true"
         hosts:
           - host: &host "hajimari.${SECRET_DOMAIN}"
             paths:
