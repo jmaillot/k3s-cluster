@@ -1,0 +1,7 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: config-babybuddy-0
+  namespace: default
+spec:

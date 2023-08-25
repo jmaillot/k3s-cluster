@@ -54,9 +54,15 @@ spec:
         tls:
           - hosts:
               - *host
-    volumeClaimTemplates:
-      - name: config
+    persistence:
+      data:
+        enabled: true
+        type: pvc
         mountPath: /config
-        accessMode: ReadWriteOnce
-        size: 2Gi
-        storageClass: longhorn
+        existingClaim: config-babybuddy-0
+    # volumeClaimTemplates:
+    #   - name: config
+    #     mountPath: /config
+    #     accessMode: ReadWriteOnce
+    #     size: 2Gi
+    #     storageClass: longhorn
