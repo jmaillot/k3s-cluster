@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
   - ./hajimari/ks.yaml
-  # - ./babybuddy/ks.yaml
+  - ./babybuddy/ks.yaml
